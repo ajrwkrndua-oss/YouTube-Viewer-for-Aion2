@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>유튜브 오버레이</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="tab-youtube">
+    <div class="app">
+      <header class="toolbar">
+        <div class="toolbar-top drag-zone" id="dragArea">
+          <div class="title">유튜브 오버레이</div>
+
+          <div class="tabs no-drag">
+            <button id="youtubeTab" class="tab active">유튜브</button>
+            <button id="aToolTab" class="tab">아툴검색</button>
+            <button id="manduTab" class="tab">침식 막넴 만두</button>
+          </div>
+
+          <div class="window-actions no-drag">
+            <button id="minimizeBtn" class="icon-btn">-</button>
+            <button id="closeBtn" class="icon-btn danger">X</button>
+          </div>
+        </div>
+
+        <div class="toolbar-main no-drag">
+          <button id="homeBtn" class="btn home">홈</button>
+
+          <label class="toggle">
+            <input id="alwaysOnTopToggle" type="checkbox" checked />
+            <span>항상 위</span>
+          </label>
+
+          <label class="toggle">
+            <input id="clickThroughToggle" type="checkbox" />
+            <span>클릭 통과</span>
+          </label>
+
+          <label class="opacity-box">
+            <span id="opacityText">투명도 85%</span>
+            <input id="opacityRange" type="range" min="25" max="100" value="85" />
+          </label>
+
+          <div class="size-group">
+            <button data-size="520x320" class="btn">작게</button>
+            <button data-size="1100x700" class="btn">보통</button>
+            <button data-size="1320x820" class="btn">크게</button>
+          </div>
+        </div>
+
+        <div class="toolbar-bottom no-drag">
+          <div id="youtubeControls" class="control-strip active">
+            <button id="backBtn" class="btn">뒤로</button>
+            <button id="forwardBtn" class="btn">앞으로</button>
+          </div>
+        </div>
+      </header>
+
+      <main class="content">
+        <section id="youtubePanel" class="panel active">
+          <div id="youtubeHost" class="webview-host"></div>
+        </section>
+
+        <section id="aToolPanel" class="panel">
+          <div id="aToolHost" class="webview-host"></div>
+        </section>
+
+        <section id="manduPanel" class="panel guide-panel">
+          <div id="guideFrame" class="guide-frame">
+            <img id="guideImage" class="guide-image" src="./assets/mandu-guide.svg" alt="침식 막넴 만두 안내" />
+          </div>
+        </section>
+      </main>
+
+      <footer class="status" id="statusText">준비되었습니다.</footer>
+    </div>
+
+    <script src="./renderer.js"></script>
+  </body>
+</html>

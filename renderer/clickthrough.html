@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>통과 끄기</title>
+    <style>
+      html, body {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: #d68910;
+        font-family: "Segoe UI", sans-serif;
+      }
+
+      button {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        background: #d68910;
+        color: white;
+        font-size: 14px;
+        font-weight: 700;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="disableBtn">통과 끄기</button>
+    <script>
+      document.getElementById("disableBtn").addEventListener("click", () => {
+        window.overlayApi.disableClickThrough();
+      });
+    </script>
+  </body>
+  </html>
