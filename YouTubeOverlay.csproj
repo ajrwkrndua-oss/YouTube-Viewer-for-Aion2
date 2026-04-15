@@ -8,6 +8,12 @@
     <AssemblyName>Aion2Overlay</AssemblyName>
     <RootNamespace>YouTubeOverlay</RootNamespace>
     <ApplicationIcon>Assets\Aion2Overlay.ico</ApplicationIcon>
+    <Product>Aion2 Overlay</Product>
+    <Version>1.0.0</Version>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <InformationalVersion>1.0.0</InformationalVersion>
+    <Company>ajrwkrndua-oss</Company>
   </PropertyGroup>
 
   <ItemGroup>
